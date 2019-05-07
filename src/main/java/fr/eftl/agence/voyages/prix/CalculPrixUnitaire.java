@@ -9,7 +9,6 @@ public class CalculPrixUnitaire {
 	this.setArrivee(arrivee);		
 	}
 	public CalculPrixUnitaire() {
-		// TODO Auto-generated constructor stub
 	}
 	public Integer generer() {
 		return null;

@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8"?><!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd"><html xmlns="http://www.w3.org/1999/xhtml" lang="fr"><head><meta http-equiv="Content-Type" content="text/html;charset=UTF-8"/><link rel="stylesheet" href="../jacoco-resources/report.css" type="text/css"/><link rel="shortcut icon" href="../jacoco-resources/report.gif" type="image/gif"/><title>CalculPrixBillet.java</title><link rel="stylesheet" href="../jacoco-resources/prettify.css" type="text/css"/><script type="text/javascript" src="../jacoco-resources/prettify.js"></script></head><body onload="window['PR_TAB_WIDTH']=4;prettyPrint()"><div class="breadcrumb" id="breadcrumb"><span class="info"><a href="../jacoco-sessions.html" class="el_session">Sessions</a></span><a href="../index.html" class="el_report">agence-voyages</a> &gt; <a href="index.source.html" class="el_package">fr.eftl.agence.voyages.prix</a> &gt; <span class="el_source">CalculPrixBillet.java</span></div><h1>CalculPrixBillet.java</h1><pre class="source lang-java linenums">package fr.eftl.agence.voyages.prix;
+
+<span class="fc" id="L3">public class CalculPrixBillet {</span>
+
+	private CalculPrixUnitaire CalculPrixUnitaire;
+	private Integer PrixUnitaire;
+	private String classe;
+	public Integer getPrixUnitaire() {
+<span class="nc" id="L9">		return PrixUnitaire;</span>
+	}
+	public void setPrixUnitaire(Integer prixUnitaire) {
+<span class="nc" id="L12">		PrixUnitaire = prixUnitaire;</span>
+<span class="nc" id="L13">	}</span>
+	public String getClasse() {
+<span class="nc" id="L15">		return classe;</span>
+	}
+	public void setClasse(String classe) {
+<span class="nc" id="L18">		this.classe = classe;</span>
+<span class="nc" id="L19">	}</span>
+	public Integer calculer(String depart,String arrivee, String classe) {
+<span class="fc" id="L21">		CalculPrixUnitaire.setDepart(depart);</span>
+<span class="fc" id="L22">		CalculPrixUnitaire.setArrivee(arrivee);</span>
+<span class="fc" id="L23">		Integer varprixUnitaire = CalculPrixUnitaire.generer();</span>
+<span class="fc bfc" id="L24" title="All 4 branches covered.">		switch(classe) {</span>
+		
+			case&quot;eco&quot;:
+<span class="fc" id="L27">			return varprixUnitaire;</span>
+		
+			case&quot;premiere&quot;:
+<span class="fc" id="L30">			return varprixUnitaire*2;</span>
+			
+			case&quot;business&quot;:
+<span class="fc" id="L33">			return varprixUnitaire*2 + 300;</span>
+			
+			default:
+<span class="fc" id="L36">			return varprixUnitaire;</span>
+		}
+	}
+	public CalculPrixUnitaire getCalculPrixUnitaire() {
+<span class="nc" id="L40">		return CalculPrixUnitaire;</span>
+	}
+	public void setCalculPrixUnitaire(CalculPrixUnitaire calculPrixUnitaire) {
+<span class="fc" id="L43">		CalculPrixUnitaire = calculPrixUnitaire;</span>
+<span class="fc" id="L44">	}</span>
+}
+</pre><div class="footer"><span class="right">Created with <a href="http://www.jacoco.org/jacoco">JaCoCo</a> 0.8.2.201808211720</span></div></body></html>
